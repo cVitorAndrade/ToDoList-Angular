@@ -1,0 +1,25 @@
+@import '../../../../dist/scss/variables.scss';
+
+:host {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+}
+
+input {
+    padding: 1rem;
+    width: 80%;
+    background-color: $tertiary-background-color;
+    border: none;
+    text-align: center;
+    outline: none;
+    display: block;
+}
+
+input::placeholder,
+input {
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}

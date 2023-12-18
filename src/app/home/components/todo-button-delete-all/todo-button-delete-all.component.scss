@@ -1,0 +1,20 @@
+@import '../../../../dist/scss/variables.scss';
+
+button {
+    background-color: $danger-color;
+    padding: 1rem 0;
+    color: $secondary-text-color;
+    border: none;
+    border-radius: 9999px;
+    width: 50%;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    cursor: pointer;
+    transition: filter .2s ease-in-out;
+
+    &:hover {
+        filter: opacity(0.8);
+    }
+}

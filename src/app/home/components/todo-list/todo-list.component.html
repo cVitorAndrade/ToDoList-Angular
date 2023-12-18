@@ -1,0 +1,22 @@
+<section>
+    <ul *ngIf="taskList.length; else elseBlock">
+        <li *ngFor="let task of taskList; index as index">
+            <div [ngClass]="'task'">
+                <input type="checkbox" [(ngModel)]="task.checked" id="{{ task.name}}-{{ index }}">
+                <label for="{{ task.name }}-{{ index }}">{{ task.name }}</label>
+            </div>
+
+            <button (click)="deleteTask(index)">
+                <img src="assets/recycle-bin.svg" alt="">
+            </button>
+        </li>
+    </ul>
+
+</section>
+
+<app-todo-input-add-itens (addTaskEvent)="setTask($event)"></app-todo-input-add-itens>
+<app-todo-button-delete-all (click)="deleteAllTasks()" *ngIf="taskList.length"></app-todo-button-delete-all>
+
+<ng-template #elseBlock>
+    <img src="assets/bg-task.png" alt="">
+</ng-template>
